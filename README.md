@@ -23,4 +23,10 @@ The underlying service controls and package commands come from the same M7 confi
 - [Tizen Deck](https://github.com/LabDennis/tizen-deck): monitor administration and optional native TV service.
 - [Tizen Deck XMB](https://github.com/LabDennis/tizen-deck-xmb): German-language launcher.
 
-Developed by LabDennis with OpenAI Codex. No affiliation with Samsung.
+Mostly vibe-coded with OpenAI Codex. No affiliation with Samsung.
+
+## Package list and verification
+
+- [The 17 packages](docs/PACKAGES.md)
+- [Original results and current checks](docs/VERIFICATION.md)
+- Local tests: `python3 -m unittest discover -s tests -v`

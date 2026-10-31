@@ -27,3 +27,18 @@ Before removal, it records packages/services and archives the selected applicati
 The script also creates the selected service-suppression markers and stops the context-awareness services. Firmware autoupdate is configured separately using [UPDATES.md](UPDATES.md).
 
 The commands are derived from this account's existing M7 procedure. This standalone version adds an explicit model acknowledgement and separates update control. Shell syntax and no-change invocation were checked locally; this version has not been reapplied to a monitor. Backups can contain private data and Samsung files: never upload them to GitHub.
+
+## Logs and checks
+
+The no-change invocation prints the exact package list. Every directory is
+checked before backup. Archive hashes are saved in `SHA256SUMS`; each uninstall
+has its own private log and must report the expected successful callback.
+An exit code alone is insufficient. Newly created suppression markers are
+recorded in `created-markers.txt`. They persist across reboot; removing one
+does not reinstall its package. Review [the verification record](VERIFICATION.md)
+and [package list](PACKAGES.md). Never rerun by deleting the original backup.
+
+Service stops are queued with `--no-block`, as in the original cleanup.
+The final state output can still show a transition; inspect the two
+context-aware units again until inactive. Script completion confirms the
+package callbacks, not completion of asynchronous systemd stop jobs.
