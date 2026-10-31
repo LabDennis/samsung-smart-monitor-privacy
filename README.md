@@ -2,7 +2,7 @@
 
 Privacy controls, firmware autoupdate settings and optional debloat for the **Samsung Smart Monitor M7 LS32BM700UUXEN**, firmware **T-NKLBWWC-1720.7**, Tizen 6.5.
 
-Use this project without a launcher or web administration service. It contains project-written documentation and an optional shell script; firmware, Samsung binaries and root exploits are not bundled.
+Standalone guides and a shell script; no launcher or web service required. Firmware, Samsung binaries and root exploits are not bundled.
 
 ## Choose what to change
 
@@ -16,7 +16,8 @@ Commands run **on the monitor**, in an already authorized root shell. They are n
 
 Service masks are temporary and expire after reboot. Turning off the firmware autoupdate preference does not block every update endpoint, manual updates or app-store updates. These measures reduce selected background activity; they do not establish complete telemetry removal. Disabling autoupdate also means security updates must be managed manually.
 
-The underlying service controls and package commands come from the same M7 configuration documented in [Tizen Deck](https://github.com/LabDennis/tizen-deck). This standalone packaging has been checked locally, not reapplied to a monitor. Other models and firmware versions are unverified.
+The package commands were tested on this M7 configuration. The standalone script
+has local tests only; other models and firmware versions are unverified.
 
 ## Related projects
 
