@@ -1,0 +1,12 @@
+backups/
+.state/
+*.log
+*.img
+*.bin
+*.tar.gz
+*.key
+*.pem
+*.p12
+*.wgt
+*.tpk
+__pycache__/
